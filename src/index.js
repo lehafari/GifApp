@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import GitExpertApp from './GitExpertApp';
+import GifExpertApp from './GifExpertApp';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(<GitExpertApp />, document.getElementById('root'));
+ReactDOM.render(<GifExpertApp />, document.getElementById('root'));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
