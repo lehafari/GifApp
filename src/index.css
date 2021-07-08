@@ -43,3 +43,14 @@ button {
 button:active {
   transform: translate(1px);
 }
+
+#root > ul > div > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#root > ul > div > ul > div {
+  width: fit-content;
+  height: fit-content;
+  margin: 10px;
+}
