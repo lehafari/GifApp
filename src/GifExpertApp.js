@@ -1,18 +1,18 @@
-import { useState } from 'react';
-import AddCategory from './Components/AddCategory';
+import React, { useState } from 'react';
+import AddCategories from './Components/AddCategories';
 import GifGrid from './Components/GifGrid';
-const GifExpertApp = () => {
-  const [categories, setCategories] = useState(['Pulp Fiction']);
 
+const GifExpertApp = () => {
+  const [Categories, setCategories] = useState([]);
   return (
     <>
-      <h1>Gif Expert App</h1>
-      <AddCategory setCategories={setCategories} />
-      <ul>
-        {categories.map((category) => (
-          <GifGrid key={category} category={category} />
-        ))}
-      </ul>
+      <div className="header">
+        <h1>🤠🤟🏻</h1>
+        <AddCategories setCategories={setCategories} />
+      </div>
+      {Categories.map((e) => (
+        <GifGrid category={e} key={e} />
+      ))}
     </>
   );
 };

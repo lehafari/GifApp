@@ -1,22 +1,19 @@
-import { useEffect, useState } from 'react';
-import { getGif } from '../helpers/getGif';
-import GifGridItem from './GifGridItem';
+import { useFetchGif } from '../hooks/useFetchGif';
+import { GifGridItem } from './GifGridItem';
 
 const GifGrid = ({ category }) => {
-  const [images, setImages] = useState([]);
-
-  useEffect(() => {
-    getGif(category).then((img) => setImages(img));
-  }, [category]);
+  const { data, loading } = useFetchGif(category);
+  console.log(loading);
 
   return (
-    <div>
-      <ul>
-        {images.map((img) => (
+    <>
+      {loading && <h1 className="animate__bounceIn"> Marico el que lo lea</h1>}
+      <div className="grid">
+        {data.map((img) => (
           <GifGridItem key={img.id} {...img} />
         ))}
-      </ul>
-    </div>
+      </div>
+    </>
   );
 };
 

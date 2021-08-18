@@ -1,9 +1,7 @@
-const GifGridItem = ({ img, title }) => {
+export const GifGridItem = ({ img, title }) => {
   return (
-    <div>
-      <img src={img} alt={title}></img>
+    <div className="card animate__zoomIn">
+      <img src={img} alt={title} />
     </div>
   );
 };
-
-export default GifGridItem;
