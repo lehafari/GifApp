@@ -25,6 +25,12 @@ const AddCategories = ({ setCategories }) => {
           placeholder="Hola fea, busca algo ahi pues"
           autoComplete="off"
         />
+        <input
+          className="botton"
+          type="submit"
+          value="🔎"
+          onClick={handleSubmit}
+        ></input>
       </form>
     </div>
   );
